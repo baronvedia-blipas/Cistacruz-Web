@@ -1,0 +1,26 @@
+{
+  "name": "cistacruz-backend",
+  "version": "1.0.0",
+  "description": "Strapi CMS backend for Constructora Cistacruz SRL",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "seed": "node seed/index.js"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "^5.40.0",
+    "@strapi/plugin-users-permissions": "^5.40.0",
+    "@strapi/strapi": "^5.40.0",
+    "better-sqlite3": "^12.8.0",
+    "esbuild": "^0.27.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.3",
+    "styled-components": "^6.3.12"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x"
+  }
+}

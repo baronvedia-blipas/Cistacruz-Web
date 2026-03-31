@@ -1,32 +1,18 @@
 {
   "name": "cistacruz-web",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "Constructora Cistacruz SRL — Frontend + Strapi CMS",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run develop",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "seed": "cd backend && npm run seed",
+    "install:all": "cd frontend && npm install && cd ../backend && npm install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "@hookform/resolvers": "^5.2.2",
-    "@types/node": "^20.19.37",
-    "@types/react": "^18.3.28",
-    "autoprefixer": "^10.4.27",
-    "framer-motion": "^12.38.0",
-    "lucide-react": "^1.7.0",
-    "next": "^14.2.35",
-    "postcss": "^8.5.8",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hook-form": "^7.72.0",
-    "tailwindcss": "^3.4.19",
-    "typescript": "^5.9.3",
-    "zod": "^4.3.6"
+  "devDependencies": {
+    "concurrently": "^9.0.0"
   }
 }

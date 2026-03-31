@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": "Construction projects portfolio"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "category": {
+      "type": "enumeration",
+      "enum": ["Construcción", "Remodelación", "Comercial"],
+      "required": true
+    },
+    "description": { "type": "text" },
+    "client": { "type": "string" },
+    "location": { "type": "string" },
+    "area": { "type": "string" },
+    "duration": { "type": "string" },
+    "year": { "type": "string" },
+    "status": { "type": "string", "default": "Entregado" },
+    "featuredImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "gallery": { "type": "media", "multiple": true, "allowedTypes": ["images"] },
+    "features": { "type": "json" },
+    "order": { "type": "integer", "default": 0 }
+  }
+}

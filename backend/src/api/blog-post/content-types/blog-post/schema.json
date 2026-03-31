@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "singularName": "blog-post",
+    "pluralName": "blog-posts",
+    "displayName": "BlogPost",
+    "description": "Blog articles and news"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "excerpt": { "type": "text", "required": true },
+    "content": { "type": "richtext", "required": true },
+    "featuredImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "date": { "type": "date", "required": true },
+    "author": { "type": "string", "default": "Equipo Cistacruz" },
+    "category": {
+      "type": "enumeration",
+      "enum": ["Avances", "Tips", "Noticias", "Proyectos"],
+      "required": true
+    },
+    "readTime": { "type": "string", "default": "5 min" }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "company_infos",
+  "info": {
+    "singularName": "company-info",
+    "pluralName": "company-infos",
+    "displayName": "CompanyInfo",
+    "description": "Global company information"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slogan": { "type": "string" },
+    "description": { "type": "text" },
+    "address": { "type": "text" },
+    "phone": { "type": "string" },
+    "email": { "type": "email" },
+    "whatsapp": { "type": "string" },
+    "instagram": { "type": "string" },
+    "facebook": { "type": "string" },
+    "mapEmbed": { "type": "text" },
+    "logo": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  }
+}
