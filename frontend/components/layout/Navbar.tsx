@@ -8,12 +8,15 @@ import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import Button from "@/components/ui/Button";
 import { useQuoteModal } from "@/components/layout/QuoteModal";
+import LanguageToggle from "@/components/layout/LanguageToggle";
+import { useI18n } from "@/lib/i18n";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const { openQuote } = useQuoteModal();
+  const { t } = useI18n();
 
   useEffect(() => {
     let ticking = false;
@@ -85,8 +88,9 @@ export default function Navbar() {
                 )}
               </Link>
             ))}
+            <LanguageToggle />
             <Button onClick={openQuote} size="sm">
-              Cotizar
+              {t("nav.quote")}
             </Button>
           </div>
 

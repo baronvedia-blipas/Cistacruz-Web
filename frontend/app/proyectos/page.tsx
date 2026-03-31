@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fetchProjects } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import ProjectGrid from "@/components/projects/ProjectGrid";
+import ProjectMap from "@/components/projects/ProjectMap";
 import CTASection from "@/components/home/CTASection";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default async function ProyectosPage() {
         ]}
       />
       <ProjectGrid initialProjects={projects} />
+      <ProjectMap />
       <CTASection />
     </>
   );

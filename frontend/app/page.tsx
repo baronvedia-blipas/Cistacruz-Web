@@ -5,6 +5,7 @@ import ServicesPreview from "@/components/home/ServicesPreview";
 import ProjectsPreview from "@/components/home/ProjectsPreview";
 import ProcessTimeline from "@/components/home/ProcessTimeline";
 import Partners from "@/components/home/Partners";
+import FAQ from "@/components/home/FAQ";
 import CTASection from "@/components/home/CTASection";
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <ProjectsPreview />
       <ProcessTimeline />
       <Partners />
+      <FAQ />
       <CTASection />
     </>
   );
